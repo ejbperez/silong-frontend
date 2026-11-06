@@ -1,0 +1,213 @@
+# Project: Silong — Frontend Foundation
+
+Act as a Senior Frontend Engineer and UI/UX Designer. Help me build **Silong**, a modern boarding house and room rental marketplace for students and working professionals in the Philippines.
+
+We are starting this project from scratch. For this initial phase, focus exclusively on the frontend. Do not build the backend or database yet.
+
+## 1. Project Objective
+
+Build a responsive web application where users can:
+- Discover boarding houses, private rooms, and bedspaces.
+- Search accommodation by location.
+- Browse available properties.
+- View property details, amenities, pricing, and house rules.
+- Eventually submit reservation requests.
+
+The initial launch market is Taguig City, Philippines.
+
+## 2. Technology Stack
+
+Use the following technologies:
+
+- Next.js with App Router.
+- TypeScript.
+- Mantine UI.
+- Phosphor Icons.
+- CSS Modules for custom styling where needed.
+- ESLint for code quality.
+
+Use stable, compatible package versions and follow current Next.js and Mantine conventions.
+
+## 3. Brand Identity
+
+The official working product name is **Silong**.
+
+Brand positioning:
+A welcoming platform that helps people find comfortable and affordable places to stay.
+
+Primary tagline:
+"Find shelter. Feel at home."
+
+Brand personality:
+- Warm
+- Welcoming
+- Modern
+- Trustworthy
+- Approachable
+
+### Color palette
+
+Use these brand colors consistently:
+
+- Primary Brown: #795A45
+- Warm Ivory: #F7F3EC
+- Soft Beige: #E9DFD0
+- Terracotta: #C77C59
+- Charcoal: #37332F
+- Sage Green: #849078
+- White: #FFFFFF
+
+### Typography
+
+- Manrope for headings and prominent titles.
+- Inter for body text, labels, and interface elements.
+
+Design direction:
+Warm minimalist, clean layouts, natural colors, comfortable spacing, subtle shadows, rounded cards, and high-quality accommodation photography.
+
+Avoid excessive gradients, bright colors, heavy shadows, and unnecessary animations.
+
+## 4. Initial Scope
+
+For the first development phase, implement the public-facing marketplace only.
+
+Create these pages:
+
+1. Homepage (`/`)
+2. Property search results (`/properties`)
+3. Property details (`/properties/[slug]`)
+
+### Homepage
+
+Include:
+- Responsive navigation bar.
+- Silong logo placeholder or temporary text-based wordmark.
+- Navigation links.
+- Login and Register actions (visual only for now).
+- Hero section with headline and description.
+- Location search field.
+- Search button.
+- Popular areas in Taguig.
+- Featured properties section.
+- Recently added properties section.
+- Landlord call-to-action section.
+- Footer.
+
+### Property Search Results
+
+Include:
+- Search heading and current location.
+- Search and filter controls.
+- Filters for price range, room type, gender policy, amenities, and availability.
+- Property listing cards.
+- Monthly rental price.
+- Property location.
+- Room type.
+- Availability indicator.
+- Pagination or load-more interface.
+
+### Property Details
+
+Include:
+- Property image gallery.
+- Property name and address.
+- Monthly rental price.
+- Room details.
+- Amenities.
+- House rules.
+- Approximate map location placeholder.
+- Landlord information.
+- Reservation request panel (visual only; no backend functionality).
+
+## 5. Frontend Architecture
+
+Organize the project using a maintainable structure.
+
+Suggested structure:
+
+- `app/` — routes and layouts.
+- `components/` — reusable UI components.
+- `features/` — feature-specific components and logic.
+- `data/` — temporary mock data.
+- `hooks/` — reusable React hooks.
+- `lib/` — utilities and configuration.
+- `theme/` — Mantine theme and brand configuration.
+- `types/` — TypeScript interfaces and types.
+
+Separate reusable components from page-specific components.
+
+Avoid putting the entire application inside one page component.
+
+## 6. Mock Data
+
+Use realistic mock accommodation listings based in Taguig City.
+
+Include examples of:
+- Private rooms.
+- Shared rooms.
+- Bedspaces.
+
+Use reusable TypeScript interfaces for properties, rooms, amenities, and landlords.
+
+Do not hardcode mock property information directly into individual UI components.
+
+Use placeholder images from reliable image sources or local assets. Make sure missing images have graceful fallbacks.
+
+## 7. UI/UX Requirements
+
+- Fully responsive desktop, tablet, and mobile layouts.
+- Consistent spacing, typography, colors, and border radius.
+- Reusable buttons, cards, inputs, badges, and navigation.
+- Accessible labels and semantic HTML.
+- Loading, empty, and error states where appropriate.
+- Clear visual hierarchy.
+- Mobile-friendly search and filter experience.
+
+Use Mantine components where appropriate rather than recreating standard UI elements unnecessarily.
+
+Use Phosphor Icons consistently.
+
+## 8. Development Rules
+
+- Do not implement Laravel API integration yet.
+- Do not implement authentication yet.
+- Do not implement database functionality.
+- Do not implement actual reservations yet.
+- Use mock data and frontend-only interactions.
+- Do not introduce unnecessary dependencies.
+- Keep components reusable and maintainable.
+- Follow TypeScript best practices.
+- Do not use `any` unless absolutely necessary.
+
+## 9. Development Workflow
+
+Before writing code:
+
+1. Inspect the existing project directory.
+2. Present the proposed folder structure.
+3. Identify the required packages.
+4. Explain the implementation plan.
+5. Identify any architectural decisions that should be made before implementation.
+
+Wait for my approval before making significant changes.
+
+After approval, initialize the project and implement the frontend foundation.
+
+Work incrementally. Do not attempt to implement every page in one large component.
+
+## 10. Expected Initial Deliverables
+
+At the end of this initial phase, I expect:
+
+- A working Next.js project.
+- Mantine configured properly.
+- Silong brand theme configured.
+- Manrope and Inter fonts configured.
+- Phosphor Icons integrated.
+- Responsive global layout.
+- Reusable header and footer.
+- Reusable property card.
+- Homepage using mock data.
+- Clean and maintainable project structure.
+
+Prioritize code quality, visual consistency, and a production-ready foundation.
