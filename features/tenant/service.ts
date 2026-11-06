@@ -3,6 +3,7 @@ import { mockFavorites, mockReservations } from "./data/tenantMockData";
 import type { DashboardStatistics, Reservation, TenantProfileUpdate, TenantServiceResult } from "./types";
 
 const temporaryResult = (message: string): Promise<TenantServiceResult> => Promise.resolve({ success: true, message });
+const failedResult = (message: string): Promise<TenantServiceResult> => Promise.resolve({ success: false, message });
 
 export function getTenantDashboard(): Promise<DashboardStatistics> {
   return Promise.resolve({
@@ -33,8 +34,8 @@ export function getReservationById(reservationId: string): Promise<Reservation |
 
 export function cancelReservation(reservationId: string, reason?: string): Promise<TenantServiceResult> {
   const reservation = mockReservations.find((item) => item.id === reservationId);
-  if (!reservation) return temporaryResult("That reservation could not be found.");
-  if (reservation.status !== "pending" && reservation.status !== "approved") return temporaryResult("Only pending or approved requests can be cancelled.");
+  if (!reservation) return failedResult("That reservation could not be found.");
+  if (reservation.status !== "pending" && reservation.status !== "approved") return failedResult("Only pending or approved requests can be cancelled.");
   void reason;
   return temporaryResult("Cancellation recorded for this frontend session.");
 }

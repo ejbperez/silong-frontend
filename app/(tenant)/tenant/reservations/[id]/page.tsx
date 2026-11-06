@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
-import { TenantPageIntro } from "@/features/tenant/components/TenantPageIntro";
+import { notFound } from "next/navigation";
+import { getReservationById } from "@/features/tenant/service";
+import { TenantReservationDetailsContent } from "@/features/tenant/components/TenantReservationDetailsContent";
 export const metadata: Metadata = { title: "Reservation details | Silong", description: "View your Silong reservation request." };
-export default function TenantReservationDetailsPage() { return <TenantPageIntro eyebrow="Request details" title="Reservation details" description="Detailed reservation information will appear here as the reservations milestone is completed." />; }
+export default async function TenantReservationDetailsPage({ params }: { params: Promise<{ id: string }> }) { const { id } = await params; const reservation = await getReservationById(id); if (!reservation) notFound(); return <TenantReservationDetailsContent reservationId={id} />; }
