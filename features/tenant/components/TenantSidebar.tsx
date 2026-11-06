@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { House, Heart, ClipboardText, User, Gear, ArrowSquareOut } from "@phosphor-icons/react";
 
 const links = [
@@ -12,10 +13,11 @@ const links = [
 ];
 
 export function TenantSidebar({ onNavigate }: { onNavigate?: () => void }) {
+  const pathname = usePathname();
   return <nav className="tenantSidebar" aria-label="Tenant portal navigation">
     <div className="tenantNavSection">
       <p className="tenantNavLabel">Your space</p>
-      {links.map(({ href, label, icon: Icon }) => <Link key={href} href={href} className="tenantNavLink" onClick={onNavigate}><Icon size={20} weight="duotone" />{label}</Link>)}
+      {links.map(({ href, label, icon: Icon }) => <Link key={href} href={href} className={`tenantNavLink ${pathname === href || pathname.startsWith(`${href}/`) ? "tenantNavLinkActive" : ""}`} aria-current={pathname === href ? "page" : undefined} onClick={onNavigate}><Icon size={20} weight="duotone" />{label}</Link>)}
     </div>
     <div className="tenantNavBottom"><Link href="/properties" className="tenantNavLink" onClick={onNavigate}><ArrowSquareOut size={20} weight="duotone" />Back to marketplace</Link></div>
   </nav>;
