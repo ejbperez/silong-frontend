@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { RegistrationTypeCard } from "@/features/auth/components/RegistrationTypeCard";
+export const metadata: Metadata = { title: "Create an account | Silong", description: "Choose how you want to use Silong." };
+export default function RegisterPage() { return <div><p className="eyebrow">Welcome to Silong</p><h2 className="authHeading">Create an account</h2><p className="authSubtitle">Choose the path that fits your next chapter.</p><div className="authRoleGrid"><RegistrationTypeCard role="tenant" title="I’m looking for a place" description="Discover rooms and bedspaces that feel right." href="/register/tenant" /><RegistrationTypeCard role="landlord" title="I have a place to list" description="Share your space with people looking for home." href="/register/landlord" /></div><p className="authFooterText">Already have an account? <a href="/login">Log in</a></p></div>; }

@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { InstagramLogo, FacebookLogo, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { Logo } from "@/components/brand/Logo";
+
+export function Footer() { return <footer className="siteFooter"><div className="container footerGrid"><div><Logo light /><p className="footerIntro">Find a comfortable place to stay, right where life takes you.</p><div className="socials"><Link href="#" aria-label="Silong on Instagram"><InstagramLogo size={20} /></Link><Link href="#" aria-label="Silong on Facebook"><FacebookLogo size={20} /></Link></div></div><div><h3>Explore</h3><Link href="/properties">Find a place</Link><Link href="#how-it-works">How it works</Link><Link href="#for-landlords">List your place <ArrowUpRight size={14} /></Link></div><div><h3>Silong</h3><Link href="#">About us</Link><Link href="#">Help center</Link><Link href="#">Safety</Link></div></div><div className="container footerBottom"><span>© 2026 Silong. Made for finding home.</span><span>Taguig City, Philippines</span></div></footer>; }
