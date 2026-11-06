@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local planning documents
+/Prompt 01 — Silong Frontend Project Initialization.txt
+/plan and goal.txt
